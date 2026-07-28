@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>25 Div Example</title>
+    <style>
+        #container{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+        #container >div{
+           background-color: aqua;
+           font-family: Arial, Helvetica, sans-serif;
+           font-size: 20px;
+           font-weight: bold;
+           padding: 20px;
+           margin: 20px;
+           width: 200px;
+           text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="container"></div>
+
+    <script>
+        const container = document.getElementById("container");
+
+        for (let i = 1; i <= 25; i++) {
+            const div = document.createElement("div");
+            div.innerText = `This is Div ${i}`;
+            container.appendChild(div);
+        }
+    </script>
+
+</body>
+</html>
